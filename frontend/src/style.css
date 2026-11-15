@@ -48,6 +48,36 @@ code { font-family: Consolas, monospace; font-size: 13px; word-break: break-all;
 table { width: 100%; border-collapse: collapse; margin-top: 8px; }
 th, td { text-align: left; padding: 6px 4px; border-bottom: 1px solid #e4d7c2; font-size: 14px; }
 .warn { color: #8d2f24; margin: 0; }
+.ok { color: #14633f; margin: 0; }
+
+.policy-card { margin: 14px 0; padding: 14px; background: #f7efe1; box-shadow: inset 0 0 0 1px #e0d2b8; }
+.policy-card h3 { margin-bottom: 10px; }
+.policy-locked { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.policy-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.policy-btn { display: grid; gap: 4px; text-align: left; background: #fff8ec; color: #2a241c; box-shadow: inset 0 0 0 1px #0f6e6e; }
+.policy-btn strong { color: #0f6e6e; }
+.policy-btn em { font-style: normal; font-size: 13px; color: #6d6254; }
+.policy-btn:hover:not(:disabled) { background: #e4f1ef; }
+
+.tabs { display: flex; gap: 8px; margin: 6px 0 14px; flex-wrap: wrap; }
+.tab { background: transparent; color: #0f6e6e; box-shadow: inset 0 0 0 1px #0f6e6e; padding: 7px 14px; }
+.tab.on { background: #0f6e6e; color: #f7f3ea; }
+
+.badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 12px; white-space: nowrap; }
+.badge-on, .badge-compliant { background: #dceee5; color: #14633f; }
+.badge-padded { background: #fde9c8; color: #8a5a12; }
+.badge-blocked { background: #f3dcd8; color: #8d2f24; }
+.badge-pending { background: #e6dfd0; color: #6d6254; }
+.badge-mismatch, .badge-contention, .badge-rejected { background: #f3dcd8; color: #8d2f24; }
+
+.mini { padding: 6px 10px; font-size: 13px; }
+.pad-row { display: flex; gap: 8px; align-items: center; }
+.pad-row input { padding: 7px 9px; min-width: 150px; }
+.row-padded .raw-box { color: #8a5a12; text-decoration: line-through; text-decoration-thickness: 1px; }
+.row-padded .fixed-box { color: #14633f; font-weight: 600; }
+article h3 { margin: 16px 0 4px; }
+article h3:first-child { margin-top: 4px; }
+
 @media (max-width: 900px) {
-  .layout, .layers { grid-template-columns: 1fr; }
+  .layout, .layers, .policy-options { grid-template-columns: 1fr; }
 }
